@@ -13,12 +13,13 @@ public class Test {
 	public static void main(String[] args) {
 
 		
-		ApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
 
-		UserDao userDao = context.getBean("userDao", UserDao.class);
-		System.out.println("------Records Creation--------");
-		userDao.add("Parthi", "parthi123", 1L);
-		userDao.add("madhuri", "parthi123", 2L);
+		UserDao userDao = context.getBean(UserDao.class);
+		
+		/*System.out.println("------Records Creation--------");
+		userDao.add("parthi","Parthi", 1L );
+		userDao.add("madhuri", "parthi123", 2L);*/
 
 		System.out.println("\n------Listing Multiple Records--------");
 
