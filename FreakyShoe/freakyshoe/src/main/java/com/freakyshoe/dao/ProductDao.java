@@ -21,10 +21,10 @@ public class ProductDao {
 
 	}
 
-	public UserBean get(long productId) {
+	public ProductBean get(long productId) {
 		String SQL = "select * from PRODUCTDETAIL where productId = ?";
-		UserBean user = jdbcTemplateObject.queryForObject(SQL, new Object[] { productId }, new ProductMapper());
-		return user;
+		ProductBean product = jdbcTemplateObject.queryForObject(SQL, new Object[] { productId }, new ProductMapper());
+		return product;
 	}
 
 	public List<ProductBean> getAll() {
