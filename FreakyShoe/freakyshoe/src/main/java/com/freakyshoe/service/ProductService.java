@@ -7,8 +7,14 @@ import com.freakyshoe.dao.ProductDao;
 
 public class ProductService 
 {
-	ProductDao dao = new ProductDao();
+	private ProductDao dao;
 	
+	
+	public void setDao(ProductDao dao)
+	{
+		this.dao = dao;
+	}
+
 	public List<ProductBean> getAllProducts()
 	{	
 		return dao.getAll();	

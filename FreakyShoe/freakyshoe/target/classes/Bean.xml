@@ -24,4 +24,13 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 <bean id="productDao" class="com.freakyshoe.dao.ProductDao">  
 <property name="jdbcTemplateObject" ref="jdbcTemp"></property>  
 </bean>  
+
+<bean id="login" class="com.freakyshoe.service.LoginService">  
+<property name="dao" ref="userDao"></property>  
+</bean> 
+
+<bean id="product" class="com.freakyshoe.service.ProductService">  
+<property name="dao" ref="productDao"></property>  
+</bean> 
+
 </beans>  

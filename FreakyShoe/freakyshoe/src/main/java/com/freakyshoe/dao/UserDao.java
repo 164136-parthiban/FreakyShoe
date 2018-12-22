@@ -37,7 +37,7 @@ public class UserDao {
 	}
 
 	public void remove(long id) {
-		String SQL = "delete from USERDETAIL where id = ?";
+		String SQL = "delete from USERDETAIL where userId = ?";
 		jdbcTemplateObject.update(SQL, id);
 		System.out.println("Deleted Record with userId = " + id);
 		return;
